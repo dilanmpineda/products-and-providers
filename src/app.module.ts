@@ -1,19 +1,25 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { AuthModule } from './components/auth/auth.module';
-import { UsersModule } from './components/users/users.module';
-import { ProductsModule } from './components/products/products.module';
-import { ProvidersModule } from './components/providers/providers.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { UsersModule } from './modules/users/users.module';
+import { ProductsModule } from './modules/products/products.module';
+import { ProvidersModule } from './modules/providers/providers.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    MongooseModule.forRoot('mongodb://localhost/db-products-providers'),
+    MongooseModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: async (config: ConfigService) => ({
+        uri: config.get<string>('MONGO_DB_URI')
+      }),
+      inject: [ConfigService]
+    }),
     AuthModule,
     UsersModule,
     ProductsModule,
