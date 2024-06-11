@@ -183,12 +183,12 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpbGFuIiwic3ViIjoiNjY2NzcyYjdkNDRiNmY0NjM1ZjIwYWRhIiwiaWF0IjoxNzE4MDU3OTIwLCJleHAiOjE3MTgwNjE1MjB9.3jQBhf6AEklsdDI_433doU2ID50iJCrAl86aclKTw5Y"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpbGFuIiwic3ViIjoiNjY2NzcyYjdkNDRiNmY0NjM1ZjIwYWRhIiwiaWF0IjoxNzE4MDcyNDgxLCJleHAiOjE3MTgwNzYwODF9.IphnIeA8ICDxt-itAM2RGVcUeQCVSKv7Y2BWbdZQSXE"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"Walmart\",\n    \"address\": \"Av ficticia 123\",\n    \"type\": \"supermercado\",\n    \"products\": [\n        {\n            \"name\": \"Manzana\",\n            \"price\": \"Av ficticia 123\",\n            \"stock\": 20,\n            \"type\": \"supermercado\"\n        }\n    ]\n}",
+									"raw": "{\n    \"name\": \"Walmart\",\n    \"address\": \"Av ficticia 123\",\n    \"type\": \"supermercado\",\n    \"products\": [\n        \"66677f73b15eb9fe428dd815\"\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
